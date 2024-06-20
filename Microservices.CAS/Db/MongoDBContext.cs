@@ -1,4 +1,4 @@
-using Microservices.CAS.Business;
+using Microservices.CAS.Models;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 

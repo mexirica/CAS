@@ -236,3 +236,534 @@ Microsoft.AspNetCore.Routing.RouteCreationException: An error occurred while try
 2024-06-20 18:23:10.109 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
 2024-06-20 18:23:10.109 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 206 2057267 video/mp4 6.7372ms
 2024-06-20 18:23:15.223 +02:00 [INF] Application is shutting down...
+2024-06-20 18:28:59.812 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:28:59.836 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:28:59.836 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:28:59.836 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:29:01.206 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:29:01.392 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 187.8189ms
+2024-06-20 18:29:01.928 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:29:01.936 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 18:29:01.979 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 53.6012ms
+2024-06-20 18:29:13.049 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/abc/coding.mp4 - null null
+2024-06-20 18:29:13.053 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 18:29:13.078 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:29:13.351 +02:00 [INF] Setting HTTP status code 404.
+2024-06-20 18:29:13.353 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:29:13.355 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: JsonTypeInfo metadata for type 'System.String' was not provided by TypeInfoResolver of type '[]'. If using source generation, ensure that all root types passed to the serializer have been annotated with 'JsonSerializableAttribute', along with any types that might be serialized polymorphically.
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_NoMetadataForType(Type type, IJsonTypeInfoResolver resolver)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Http.HttpResultsHelper.WriteResultAsJsonAsync[TValue](HttpContext httpContext, ILogger logger, TValue value, String contentType, JsonSerializerOptions jsonSerializerOptions)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.ExecuteAsyncExplicit(IResult result, HttpContext httpContext) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 505
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapGet1>g__RequestHandler|4>d.MoveNext() in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 303
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microservices.CAS.Middleware.EndpointLoggingMiddleware.Invoke(HttpContext context) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Middleware/EndpointLoggingMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-20 18:29:13.368 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/abc/coding.mp4 - 500 null text/plain; charset=utf-8 318.8796ms
+2024-06-20 18:29:33.838 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - null null
+2024-06-20 18:29:33.840 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:29:33.850 +02:00 [INF] Sending file with download name 'coding.mp4'.
+2024-06-20 18:29:33.871 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:29:33.872 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - 200 2057267 application/octet-stream 34.7982ms
+2024-06-20 18:29:41.687 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:29:41.689 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:29:41.697 +02:00 [INF] Sending file with download name ''.
+2024-06-20 18:29:41.704 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:29:41.704 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 200 2057267 video/mp4 18.0035ms
+2024-06-20 18:29:58.178 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/fasdfa/coding.mp4 - null null
+2024-06-20 18:29:58.180 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:29:58.189 +02:00 [INF] Setting HTTP status code 404.
+2024-06-20 18:29:58.190 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:29:58.190 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: JsonTypeInfo metadata for type 'System.String' was not provided by TypeInfoResolver of type '[]'. If using source generation, ensure that all root types passed to the serializer have been annotated with 'JsonSerializableAttribute', along with any types that might be serialized polymorphically.
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_NoMetadataForType(Type type, IJsonTypeInfoResolver resolver)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Http.HttpResultsHelper.WriteResultAsJsonAsync[TValue](HttpContext httpContext, ILogger logger, TValue value, String contentType, JsonSerializerOptions jsonSerializerOptions)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.ExecuteAsyncExplicit(IResult result, HttpContext httpContext) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 505
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapGet1>g__RequestHandler|4>d.MoveNext() in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 303
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microservices.CAS.Middleware.EndpointLoggingMiddleware.Invoke(HttpContext context) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Middleware/EndpointLoggingMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-20 18:29:58.194 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/fasdfa/coding.mp4 - 500 null text/plain; charset=utf-8 16.6154ms
+2024-06-20 18:32:26.437 +02:00 [INF] Application is shutting down...
+2024-06-20 18:39:10.301 +02:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to find the required services. Please add all the required services by calling 'IServiceCollection.AddControllers' inside the call to 'ConfigureServices(...)' in the application startup code.
+   at Microsoft.AspNetCore.Builder.ControllerEndpointRouteBuilderExtensions.EnsureControllerServices(IEndpointRouteBuilder endpoints)
+   at Microsoft.AspNetCore.Builder.ControllerEndpointRouteBuilderExtensions.MapControllers(IEndpointRouteBuilder endpoints)
+   at Startup.<>c.<Configure>b__3_0(IEndpointRouteBuilder endpoints) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Startup.cs:line 51
+   at Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints(IApplicationBuilder builder, Action`1 configure)
+   at Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Startup.cs:line 49
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2024-06-20 18:39:10.331 +02:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to find the required services. Please add all the required services by calling 'IServiceCollection.AddControllers' inside the call to 'ConfigureServices(...)' in the application startup code.
+   at Microsoft.AspNetCore.Builder.ControllerEndpointRouteBuilderExtensions.EnsureControllerServices(IEndpointRouteBuilder endpoints)
+   at Microsoft.AspNetCore.Builder.ControllerEndpointRouteBuilderExtensions.MapControllers(IEndpointRouteBuilder endpoints)
+   at Startup.<>c.<Configure>b__3_0(IEndpointRouteBuilder endpoints) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Startup.cs:line 51
+   at Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints(IApplicationBuilder builder, Action`1 configure)
+   at Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Startup.cs:line 49
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-06-20 18:40:20.471 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 18:40:20.506 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:40:20.508 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:40:20.508 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:40:20.508 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:40:21.482 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:40:21.536 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 55.834ms
+2024-06-20 18:40:21.708 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:40:21.717 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.7792ms
+2024-06-20 18:40:28.478 +02:00 [INF] Application is shutting down...
+2024-06-20 18:41:00.013 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:41:00.037 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:41:00.038 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:41:00.038 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:41:02.227 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:41:02.293 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 70.3871ms
+2024-06-20 18:41:02.408 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:41:02.411 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 18:41:02.462 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 54.7673ms
+2024-06-20 18:41:08.886 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/asdfadsf/fasdf - null null
+2024-06-20 18:41:08.888 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 18:41:08.899 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:41:09.223 +02:00 [INF] Setting HTTP status code 404.
+2024-06-20 18:41:09.225 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:41:09.227 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: JsonTypeInfo metadata for type 'System.String' was not provided by TypeInfoResolver of type '[]'. If using source generation, ensure that all root types passed to the serializer have been annotated with 'JsonSerializableAttribute', along with any types that might be serialized polymorphically.
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_NoMetadataForType(Type type, IJsonTypeInfoResolver resolver)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Http.HttpResultsHelper.WriteResultAsJsonAsync[TValue](HttpContext httpContext, ILogger logger, TValue value, String contentType, JsonSerializerOptions jsonSerializerOptions)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.ExecuteAsyncExplicit(IResult result, HttpContext httpContext) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 505
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapGet1>g__RequestHandler|4>d.MoveNext() in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 303
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microservices.CAS.Middleware.EndpointLoggingMiddleware.Invoke(HttpContext context) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Middleware/EndpointLoggingMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-20 18:41:09.243 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/asdfadsf/fasdf - 500 null text/plain; charset=utf-8 357.6555ms
+2024-06-20 18:41:51.626 +02:00 [INF] Application is shutting down...
+2024-06-20 18:42:16.060 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:42:16.099 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:42:16.099 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:42:16.100 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:42:16.503 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:42:16.557 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 55.7425ms
+2024-06-20 18:42:16.694 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:42:16.698 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 18:42:16.741 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.8154ms
+2024-06-20 18:42:23.094 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/fasdfas/fasdfa - null null
+2024-06-20 18:42:23.097 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 18:42:23.121 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:42:23.381 +02:00 [INF] Setting HTTP status code 404.
+2024-06-20 18:42:23.382 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:42:23.384 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: JsonTypeInfo metadata for type 'System.String' was not provided by TypeInfoResolver of type '[]'. If using source generation, ensure that all root types passed to the serializer have been annotated with 'JsonSerializableAttribute', along with any types that might be serialized polymorphically.
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_NoMetadataForType(Type type, IJsonTypeInfoResolver resolver)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Http.HttpResultsHelper.WriteResultAsJsonAsync[TValue](HttpContext httpContext, ILogger logger, TValue value, String contentType, JsonSerializerOptions jsonSerializerOptions)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.ExecuteAsyncExplicit(IResult result, HttpContext httpContext) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 505
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapGet1>g__RequestHandler|4>d.MoveNext() in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 303
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microservices.CAS.Middleware.EndpointLoggingMiddleware.Invoke(HttpContext context) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Middleware/EndpointLoggingMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-20 18:42:23.397 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/fasdfas/fasdfa - 500 null text/plain; charset=utf-8 303.2141ms
+2024-06-20 18:53:02.656 +02:00 [INF] Application is shutting down...
+2024-06-20 18:53:07.284 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:53:07.320 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:53:07.320 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:53:07.320 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:53:08.382 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:53:08.438 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 58.2557ms
+2024-06-20 18:53:08.964 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:53:08.968 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 18:53:09.013 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.4322ms
+2024-06-20 18:53:13.788 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/asdfadsf/fasdf - null null
+2024-06-20 18:53:13.790 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 18:53:13.817 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:53:14.081 +02:00 [INF] Setting HTTP status code 404.
+2024-06-20 18:53:14.082 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:53:14.085 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: JsonTypeInfo metadata for type 'System.String' was not provided by TypeInfoResolver of type '[]'. If using source generation, ensure that all root types passed to the serializer have been annotated with 'JsonSerializableAttribute', along with any types that might be serialized polymorphically.
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_NoMetadataForType(Type type, IJsonTypeInfoResolver resolver)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Http.HttpResultsHelper.WriteResultAsJsonAsync[TValue](HttpContext httpContext, ILogger logger, TValue value, String contentType, JsonSerializerOptions jsonSerializerOptions)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.ExecuteAsyncExplicit(IResult result, HttpContext httpContext) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 505
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapGet1>g__RequestHandler|4>d.MoveNext() in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 303
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microservices.CAS.Middleware.EndpointLoggingMiddleware.Invoke(HttpContext context) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Middleware/EndpointLoggingMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-20 18:53:14.098 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/asdfadsf/fasdf - 500 null text/plain; charset=utf-8 310.1557ms
+2024-06-20 18:55:25.118 +02:00 [INF] Application is shutting down...
+2024-06-20 18:57:04.952 +02:00 [FTL] Application startup exception
+Microsoft.AspNetCore.Routing.RouteCreationException: An error occurred while trying to create an instance of 'Microsoft.AspNetCore.Routing.Constraints.RegexErrorStubRouteConstraint'.
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: A route parameter uses the regex constraint, which isn't registered. If this application was configured using CreateSlimBuilder(...) or AddRoutingCore(...) then this constraint is not registered by default. To use the regex constraint, configure route options at app startup: services.Configure<RouteOptions>(options => options.SetParameterPolicy<RegexInlineRouteConstraint>("regex"));
+   at Microsoft.AspNetCore.Routing.Constraints.RegexErrorStubRouteConstraint..ctor(String _)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Routing.ParameterPolicyActivator.CreateParameterPolicy(IServiceProvider serviceProvider, Type parameterPolicyType, String argumentString)
+   at Microsoft.AspNetCore.Routing.ParameterPolicyActivator.ResolveParameterPolicy[T](IDictionary`2 inlineParameterPolicyMap, IServiceProvider serviceProvider, String inlineParameterPolicy, String& parameterPolicyKey)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Routing.ParameterPolicyActivator.ResolveParameterPolicy[T](IDictionary`2 inlineParameterPolicyMap, IServiceProvider serviceProvider, String inlineParameterPolicy, String& parameterPolicyKey)
+   at Microsoft.AspNetCore.Routing.DefaultParameterPolicyFactory.Create(RoutePatternParameterPart parameter, String inlineText)
+   at Microsoft.AspNetCore.Routing.Template.DefaultTemplateBinderFactory.Create(RoutePattern pattern)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware..ctor(RequestDelegate next, SwaggerOptions options, TemplateBinderFactory templateBinderFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2024-06-20 18:57:04.982 +02:00 [ERR] Hosting failed to start
+Microsoft.AspNetCore.Routing.RouteCreationException: An error occurred while trying to create an instance of 'Microsoft.AspNetCore.Routing.Constraints.RegexErrorStubRouteConstraint'.
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: A route parameter uses the regex constraint, which isn't registered. If this application was configured using CreateSlimBuilder(...) or AddRoutingCore(...) then this constraint is not registered by default. To use the regex constraint, configure route options at app startup: services.Configure<RouteOptions>(options => options.SetParameterPolicy<RegexInlineRouteConstraint>("regex"));
+   at Microsoft.AspNetCore.Routing.Constraints.RegexErrorStubRouteConstraint..ctor(String _)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Routing.ParameterPolicyActivator.CreateParameterPolicy(IServiceProvider serviceProvider, Type parameterPolicyType, String argumentString)
+   at Microsoft.AspNetCore.Routing.ParameterPolicyActivator.ResolveParameterPolicy[T](IDictionary`2 inlineParameterPolicyMap, IServiceProvider serviceProvider, String inlineParameterPolicy, String& parameterPolicyKey)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Routing.ParameterPolicyActivator.ResolveParameterPolicy[T](IDictionary`2 inlineParameterPolicyMap, IServiceProvider serviceProvider, String inlineParameterPolicy, String& parameterPolicyKey)
+   at Microsoft.AspNetCore.Routing.DefaultParameterPolicyFactory.Create(RoutePatternParameterPart parameter, String inlineText)
+   at Microsoft.AspNetCore.Routing.Template.DefaultTemplateBinderFactory.Create(RoutePattern pattern)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware..ctor(RequestDelegate next, SwaggerOptions options, TemplateBinderFactory templateBinderFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-06-20 19:14:11.370 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 19:14:11.394 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 19:14:11.394 +02:00 [INF] Hosting environment: Development
+2024-06-20 19:14:11.394 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 19:14:11.921 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 19:14:12.000 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 82.0368ms
+2024-06-20 19:14:12.529 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 19:14:12.532 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 19:14:12.592 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 62.8788ms
+2024-06-20 19:14:26.539 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - null null
+2024-06-20 19:14:26.542 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 19:14:26.559 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:14:26.831 +02:00 [INF] Sending file with download name 'coding.mp4'.
+2024-06-20 19:14:26.842 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:14:26.843 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - 200 2057267 application/octet-stream 304.3362ms
+2024-06-20 19:14:34.587 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/codinga - null null
+2024-06-20 19:14:34.589 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:14:34.596 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:14:34.598 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: File codinga not found.
+   at Microservices.CAS.Business.ContentAddressableStorage.RetrieveBytes(String name) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Business/ContentAddressableStorage.cs:line 40
+   at Program.<>c.<<<Main>$>b__0_4>d.MoveNext() in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Program.cs:line 89
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapGet1>g__RequestHandler|4>d.MoveNext() in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 298
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microservices.CAS.Middleware.EndpointLoggingMiddleware.Invoke(HttpContext context) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Middleware/EndpointLoggingMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-20 19:14:34.627 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/codinga - 500 null text/plain; charset=utf-8 39.7824ms
+2024-06-20 19:14:56.727 +02:00 [INF] Application is shutting down...
+2024-06-20 19:16:33.311 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 19:16:33.337 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 19:16:33.338 +02:00 [INF] Hosting environment: Development
+2024-06-20 19:16:33.338 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 19:16:33.904 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 19:16:33.969 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 67.7294ms
+2024-06-20 19:16:34.445 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 19:16:34.448 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 19:16:34.496 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 50.9125ms
+2024-06-20 19:16:42.693 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/abc - null null
+2024-06-20 19:16:42.700 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 19:16:42.721 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:16:42.987 +02:00 [INF] Setting HTTP status code 404.
+2024-06-20 19:16:42.988 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:16:42.990 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: JsonTypeInfo metadata for type 'System.String' was not provided by TypeInfoResolver of type '[]'. If using source generation, ensure that all root types passed to the serializer have been annotated with 'JsonSerializableAttribute', along with any types that might be serialized polymorphically.
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_NoMetadataForType(Type type, IJsonTypeInfoResolver resolver)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Http.HttpResultsHelper.WriteResultAsJsonAsync[TValue](HttpContext httpContext, ILogger logger, TValue value, String contentType, JsonSerializerOptions jsonSerializerOptions)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.ExecuteAsyncExplicit(IResult result, HttpContext httpContext) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 505
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapGet1>g__RequestHandler|4>d.MoveNext() in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 303
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microservices.CAS.Middleware.EndpointLoggingMiddleware.Invoke(HttpContext context) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Middleware/EndpointLoggingMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-20 19:16:43.006 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/abc - 500 null text/plain; charset=utf-8 314.0355ms
+2024-06-20 19:27:06.129 +02:00 [INF] Application is shutting down...
+2024-06-20 19:27:10.309 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 19:27:10.344 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 19:27:10.345 +02:00 [INF] Hosting environment: Development
+2024-06-20 19:27:10.345 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 19:27:11.247 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 19:27:11.311 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 67.6335ms
+2024-06-20 19:27:12.056 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 19:27:12.061 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 19:27:12.116 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 60.4737ms
+2024-06-20 19:27:35.778 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/abc - null null
+2024-06-20 19:27:35.780 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 19:27:35.793 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:27:36.058 +02:00 [INF] Setting HTTP status code 404.
+2024-06-20 19:27:36.059 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:27:36.061 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: JsonTypeInfo metadata for type 'System.String' was not provided by TypeInfoResolver of type '[]'. If using source generation, ensure that all root types passed to the serializer have been annotated with 'JsonSerializableAttribute', along with any types that might be serialized polymorphically.
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_NoMetadataForType(Type type, IJsonTypeInfoResolver resolver)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Http.HttpResultsHelper.WriteResultAsJsonAsync[TValue](HttpContext httpContext, ILogger logger, TValue value, String contentType, JsonSerializerOptions jsonSerializerOptions)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.ExecuteAsyncExplicit(IResult result, HttpContext httpContext) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 505
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapGet1>g__RequestHandler|4>d.MoveNext() in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 303
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microservices.CAS.Middleware.EndpointLoggingMiddleware.Invoke(HttpContext context) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Middleware/EndpointLoggingMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-20 19:27:36.076 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/abc - 500 null text/plain; charset=utf-8 299.1034ms
+2024-06-20 19:28:10.179 +02:00 [INF] Application is shutting down...
+2024-06-20 19:30:43.780 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 19:30:43.804 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 19:30:43.804 +02:00 [INF] Hosting environment: Development
+2024-06-20 19:30:43.804 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 19:30:44.461 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 19:30:44.520 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 62.4605ms
+2024-06-20 19:30:44.969 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 19:30:44.972 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 19:30:45.015 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.437ms
+2024-06-20 19:30:57.815 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/codinga - null null
+2024-06-20 19:30:57.819 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 19:30:57.840 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:30:58.104 +02:00 [INF] Setting HTTP status code 404.
+2024-06-20 19:30:58.106 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:30:58.108 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: JsonTypeInfo metadata for type 'Microsoft.AspNetCore.Mvc.ProblemDetails' was not provided by TypeInfoResolver of type '[]'. If using source generation, ensure that all root types passed to the serializer have been annotated with 'JsonSerializableAttribute', along with any types that might be serialized polymorphically.
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_NoMetadataForType(Type type, IJsonTypeInfoResolver resolver)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Http.HttpResultsHelper.WriteResultAsJsonAsync[TValue](HttpContext httpContext, ILogger logger, TValue value, String contentType, JsonSerializerOptions jsonSerializerOptions)
+   at Microsoft.AspNetCore.Http.HttpResults.ProblemHttpResult.ExecuteAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapGet1>g__RequestHandler|4>d.MoveNext() in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 303
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microservices.CAS.Middleware.EndpointLoggingMiddleware.Invoke(HttpContext context) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Middleware/EndpointLoggingMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-20 19:30:58.123 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/codinga - 500 null text/plain; charset=utf-8 307.8293ms
+2024-06-20 19:34:13.694 +02:00 [INF] Application is shutting down...
+2024-06-20 19:34:26.392 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 19:34:26.415 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 19:34:26.415 +02:00 [INF] Hosting environment: Development
+2024-06-20 19:34:26.415 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 19:34:26.876 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 19:34:26.937 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 64.9777ms
+2024-06-20 19:34:27.449 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 19:34:27.461 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 19:34:27.504 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.7437ms
+2024-06-20 19:34:31.221 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/codinga - null null
+2024-06-20 19:34:31.222 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 19:34:31.241 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:34:31.487 +02:00 [INF] Setting HTTP status code 404.
+2024-06-20 19:34:31.488 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:34:31.489 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: JsonTypeInfo metadata for type 'Microsoft.AspNetCore.Mvc.ProblemDetails' was not provided by TypeInfoResolver of type '[]'. If using source generation, ensure that all root types passed to the serializer have been annotated with 'JsonSerializableAttribute', along with any types that might be serialized polymorphically.
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_NoMetadataForType(Type type, IJsonTypeInfoResolver resolver)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Http.HttpResultsHelper.WriteResultAsJsonAsync[TValue](HttpContext httpContext, ILogger logger, TValue value, String contentType, JsonSerializerOptions jsonSerializerOptions)
+   at Microsoft.AspNetCore.Http.HttpResults.ProblemHttpResult.ExecuteAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapGet1>g__RequestHandler|4>d.MoveNext() in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 303
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microservices.CAS.Middleware.EndpointLoggingMiddleware.Invoke(HttpContext context) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Middleware/EndpointLoggingMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-20 19:34:31.502 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/codinga - 500 null text/plain; charset=utf-8 281.9255ms
+2024-06-20 19:34:39.919 +02:00 [INF] Application is shutting down...
+2024-06-20 19:34:57.414 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 19:34:57.436 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 19:34:57.436 +02:00 [INF] Hosting environment: Development
+2024-06-20 19:34:57.436 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 19:34:57.696 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 19:34:57.769 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 73.961ms
+2024-06-20 19:34:57.816 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 19:34:57.819 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 19:34:57.864 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.7956ms
+2024-06-20 19:35:00.809 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/codinga - null null
+2024-06-20 19:35:00.811 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 19:35:00.832 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:35:01.076 +02:00 [INF] Setting HTTP status code 404.
+2024-06-20 19:35:01.077 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:35:01.079 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: JsonTypeInfo metadata for type 'System.String' was not provided by TypeInfoResolver of type '[]'. If using source generation, ensure that all root types passed to the serializer have been annotated with 'JsonSerializableAttribute', along with any types that might be serialized polymorphically.
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException_NoMetadataForType(Type type, IJsonTypeInfoResolver resolver)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Http.HttpResultsHelper.WriteResultAsJsonAsync[TValue](HttpContext httpContext, ILogger logger, TValue value, String contentType, JsonSerializerOptions jsonSerializerOptions)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.ExecuteAsyncExplicit(IResult result, HttpContext httpContext) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 505
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>FB49A76E00958A78ED8A3DC031D4149080B37ED6EB129C512F9112A3DB80F087D__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapGet1>g__RequestHandler|4>d.MoveNext() in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Microsoft.AspNetCore.Http.RequestDelegateGenerator/Microsoft.AspNetCore.Http.RequestDelegateGenerator.RequestDelegateGenerator/GeneratedRouteBuilderExtensions.g.cs:line 303
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microservices.CAS.Middleware.EndpointLoggingMiddleware.Invoke(HttpContext context) in /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS/Middleware/EndpointLoggingMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-20 19:35:01.090 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/codinga - 500 null text/plain; charset=utf-8 281.321ms
+2024-06-20 19:39:54.518 +02:00 [INF] Application is shutting down...
+2024-06-20 19:40:03.214 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 19:40:03.236 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 19:40:03.236 +02:00 [INF] Hosting environment: Development
+2024-06-20 19:40:03.236 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 19:40:04.271 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 19:40:04.327 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 57.8172ms
+2024-06-20 19:40:04.845 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 19:40:04.855 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 19:40:04.902 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 57.6972ms
+2024-06-20 19:40:07.699 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/codinga - null null
+2024-06-20 19:40:07.700 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 19:40:07.724 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:40:07.965 +02:00 [INF] Setting HTTP status code 404.
+2024-06-20 19:40:07.966 +02:00 [INF] Writing value of type 'String' as Json.
+2024-06-20 19:40:07.967 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:40:07.968 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/codinga - 404 null application/json; charset=utf-8 269.4389ms
+2024-06-20 19:41:03.171 +02:00 [INF] Application is shutting down...
+2024-06-20 19:41:25.382 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 19:41:25.414 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 19:41:25.415 +02:00 [INF] Hosting environment: Development
+2024-06-20 19:41:25.415 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 19:41:26.709 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 19:41:26.807 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 99.6012ms
+2024-06-20 19:41:27.464 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 19:41:27.471 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 19:41:27.517 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 53.9036ms
+2024-06-20 19:41:31.509 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/downlo/codinga - null null
+2024-06-20 19:41:31.511 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 19:41:31.538 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:41:31.698 +02:00 [INF] Setting HTTP status code 400.
+2024-06-20 19:41:31.698 +02:00 [INF] Writing value of type 'String' as Json.
+2024-06-20 19:41:31.699 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 19:41:31.699 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/downlo/codinga - 400 null application/json; charset=utf-8 190.2733ms
+2024-06-20 19:41:44.951 +02:00 [INF] Application is shutting down...
+2024-06-20 20:06:40.967 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 20:06:40.994 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 20:06:40.994 +02:00 [INF] Hosting environment: Development
+2024-06-20 20:06:40.994 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 20:06:48.822 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 20:06:48.913 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 98.3243ms
+2024-06-20 20:06:48.991 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 20:06:48.996 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 20:06:49.071 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.567ms
+2024-06-20 20:13:25.071 +02:00 [INF] Application is shutting down...
+2024-06-20 20:25:36.588 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 20:25:36.615 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 20:25:36.615 +02:00 [INF] Hosting environment: Development
+2024-06-20 20:25:36.615 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 20:25:38.012 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 20:25:38.098 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 87.5023ms
+2024-06-20 20:25:38.200 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 20:25:38.204 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 20:25:38.252 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 52.5842ms
+2024-06-20 20:25:48.783 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - null null
+2024-06-20 20:25:48.787 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 20:25:48.802 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 20:25:49.056 +02:00 [INF] Sending file with download name 'coding.mp4'.
+2024-06-20 20:25:49.072 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 20:25:49.073 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - 200 2057267 application/octet-stream 290.6195ms
+2024-06-20 20:26:16.238 +02:00 [INF] Application is shutting down...
+2024-06-20 20:29:07.164 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 20:29:07.195 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 20:29:07.196 +02:00 [INF] Hosting environment: Development
+2024-06-20 20:29:07.196 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 20:29:08.161 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 20:29:08.220 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 61.1109ms
+2024-06-20 20:29:08.782 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 20:29:08.786 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 20:29:08.833 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 51.093ms
+2024-06-20 20:29:14.018 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/fadsfasd/fadsfa - null null
+2024-06-20 20:29:14.021 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 20:29:14.043 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 20:29:14.173 +02:00 [INF] Setting HTTP status code 400.
+2024-06-20 20:29:14.173 +02:00 [INF] Writing value of type 'String' as Json.
+2024-06-20 20:29:14.174 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 20:29:14.174 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/fadsfasd/fadsfa - 400 null application/json; charset=utf-8 156.3743ms
+2024-06-20 20:29:27.663 +02:00 [INF] Application is shutting down...
+2024-06-20 20:32:13.268 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 20:32:13.291 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 20:32:13.291 +02:00 [INF] Hosting environment: Development
+2024-06-20 20:32:13.291 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 20:32:14.184 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 20:32:14.246 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 65.141ms
+2024-06-20 20:32:14.865 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 20:32:14.870 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 20:32:14.943 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 78.4363ms
+2024-06-20 20:32:16.017 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/fadsfasd/fadsfa - null null
+2024-06-20 20:32:16.018 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 20:32:16.036 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 20:32:16.042 +02:00 [INF] Setting HTTP status code 400.
+2024-06-20 20:32:16.043 +02:00 [INF] Writing value of type 'String' as Json.
+2024-06-20 20:32:16.043 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 20:32:16.044 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/fadsfasd/fadsfa - 400 null application/json; charset=utf-8 26.4389ms
+2024-06-20 20:32:22.799 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/fadsfa - null null
+2024-06-20 20:32:22.815 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 20:32:23.004 +02:00 [INF] Setting HTTP status code 404.
+2024-06-20 20:32:23.004 +02:00 [INF] Writing value of type 'String' as Json.
+2024-06-20 20:32:23.005 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 20:32:23.007 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/fadsfa - 404 null application/json; charset=utf-8 208.5939ms
+2024-06-20 20:32:28.711 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - null null
+2024-06-20 20:32:28.712 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 20:32:28.736 +02:00 [INF] Sending file with download name 'coding.mp4'.
+2024-06-20 20:32:28.756 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 20:32:28.757 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - 200 2057267 application/octet-stream 46.6613ms
+2024-06-20 20:32:28.775 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - null null
+2024-06-20 20:32:28.776 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 20:32:28.780 +02:00 [INF] Sending file with download name 'coding.mp4'.
+2024-06-20 20:32:28.785 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 20:32:28.786 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - 200 2057267 application/octet-stream 10.7833ms
+2024-06-20 20:32:34.421 +02:00 [INF] Application is shutting down...

@@ -1,6 +1,3 @@
-using System.IO;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Serilog;
 
 namespace Microservices.CAS.Middleware;

@@ -1,5 +1,3 @@
-using Microservices.CAS.Business;
-
 namespace Microservices.CAS.Db;
 
 public interface IRepository<T>
