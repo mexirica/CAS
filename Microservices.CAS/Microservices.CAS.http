@@ -1,0 +1,11 @@
+@Microservices.CAS_HostAddress = http://localhost:5291
+
+GET {{Microservices.CAS_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{Microservices.CAS_HostAddress}}/todos/1
+Accept: application/json
+
+###

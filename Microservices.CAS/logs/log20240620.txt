@@ -1,0 +1,238 @@
+2024-06-20 17:04:22.917 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 17:04:22.942 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 17:04:22.942 +02:00 [INF] Hosting environment: Development
+2024-06-20 17:04:22.942 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 17:04:24.330 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 17:04:24.507 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 177.6328ms
+2024-06-20 17:04:24.807 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 17:04:24.840 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.2582ms
+2024-06-20 17:04:28.796 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - null null
+2024-06-20 17:04:28.824 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 17:04:28.840 +02:00 [INF] Executing endpoint 'Microservices._cas.Controllers._casController.DownloadFile (Microservices.CAS)'
+2024-06-20 17:04:28.857 +02:00 [INF] Route matched with {action = "DownloadFile", controller = "_cas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.String) on controller Microservices._cas.Controllers._casController (Microservices.CAS).
+2024-06-20 17:04:29.143 +02:00 [INF] Executing FileContentResult, sending file with download name 'coding.mp4' ...
+2024-06-20 17:04:29.161 +02:00 [INF] Executed action Microservices._cas.Controllers._casController.DownloadFile (Microservices.CAS) in 301.7652ms
+2024-06-20 17:04:29.161 +02:00 [INF] Executed endpoint 'Microservices._cas.Controllers._casController.DownloadFile (Microservices.CAS)'
+2024-06-20 17:04:29.164 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - 200 2057267 application/octet-stream 367.8544ms
+2024-06-20 17:04:30.955 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/coding.mp4324 - null null
+2024-06-20 17:04:30.957 +02:00 [INF] Executing endpoint 'Microservices._cas.Controllers._casController.DownloadFile (Microservices.CAS)'
+2024-06-20 17:04:30.958 +02:00 [INF] Route matched with {action = "DownloadFile", controller = "_cas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.String) on controller Microservices._cas.Controllers._casController (Microservices.CAS).
+2024-06-20 17:04:30.990 +02:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-06-20 17:04:30.991 +02:00 [INF] Executed action Microservices._cas.Controllers._casController.DownloadFile (Microservices.CAS) in 32.2828ms
+2024-06-20 17:04:30.991 +02:00 [INF] Executed endpoint 'Microservices._cas.Controllers._casController.DownloadFile (Microservices.CAS)'
+2024-06-20 17:04:30.992 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/coding.mp4324 - 404 null text/plain; charset=utf-8 36.2887ms
+2024-06-20 17:05:23.121 +02:00 [INF] Application is shutting down...
+2024-06-20 17:59:55.838 +02:00 [FTL] Application startup exception
+Microsoft.AspNetCore.Routing.RouteCreationException: An error occurred while trying to create an instance of 'Microsoft.AspNetCore.Routing.Constraints.RegexErrorStubRouteConstraint'.
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: A route parameter uses the regex constraint, which isn't registered. If this application was configured using CreateSlimBuilder(...) or AddRoutingCore(...) then this constraint is not registered by default. To use the regex constraint, configure route options at app startup: services.Configure<RouteOptions>(options => options.SetParameterPolicy<RegexInlineRouteConstraint>("regex"));
+   at Microsoft.AspNetCore.Routing.Constraints.RegexErrorStubRouteConstraint..ctor(String _)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Routing.ParameterPolicyActivator.CreateParameterPolicy(IServiceProvider serviceProvider, Type parameterPolicyType, String argumentString)
+   at Microsoft.AspNetCore.Routing.ParameterPolicyActivator.ResolveParameterPolicy[T](IDictionary`2 inlineParameterPolicyMap, IServiceProvider serviceProvider, String inlineParameterPolicy, String& parameterPolicyKey)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Routing.ParameterPolicyActivator.ResolveParameterPolicy[T](IDictionary`2 inlineParameterPolicyMap, IServiceProvider serviceProvider, String inlineParameterPolicy, String& parameterPolicyKey)
+   at Microsoft.AspNetCore.Routing.DefaultParameterPolicyFactory.Create(RoutePatternParameterPart parameter, String inlineText)
+   at Microsoft.AspNetCore.Routing.Template.DefaultTemplateBinderFactory.Create(RoutePattern pattern)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware..ctor(RequestDelegate next, SwaggerOptions options, TemplateBinderFactory templateBinderFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2024-06-20 17:59:55.872 +02:00 [ERR] Hosting failed to start
+Microsoft.AspNetCore.Routing.RouteCreationException: An error occurred while trying to create an instance of 'Microsoft.AspNetCore.Routing.Constraints.RegexErrorStubRouteConstraint'.
+ ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: A route parameter uses the regex constraint, which isn't registered. If this application was configured using CreateSlimBuilder(...) or AddRoutingCore(...) then this constraint is not registered by default. To use the regex constraint, configure route options at app startup: services.Configure<RouteOptions>(options => options.SetParameterPolicy<RegexInlineRouteConstraint>("regex"));
+   at Microsoft.AspNetCore.Routing.Constraints.RegexErrorStubRouteConstraint..ctor(String _)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Routing.ParameterPolicyActivator.CreateParameterPolicy(IServiceProvider serviceProvider, Type parameterPolicyType, String argumentString)
+   at Microsoft.AspNetCore.Routing.ParameterPolicyActivator.ResolveParameterPolicy[T](IDictionary`2 inlineParameterPolicyMap, IServiceProvider serviceProvider, String inlineParameterPolicy, String& parameterPolicyKey)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Routing.ParameterPolicyActivator.ResolveParameterPolicy[T](IDictionary`2 inlineParameterPolicyMap, IServiceProvider serviceProvider, String inlineParameterPolicy, String& parameterPolicyKey)
+   at Microsoft.AspNetCore.Routing.DefaultParameterPolicyFactory.Create(RoutePatternParameterPart parameter, String inlineText)
+   at Microsoft.AspNetCore.Routing.Template.DefaultTemplateBinderFactory.Create(RoutePattern pattern)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware..ctor(RequestDelegate next, SwaggerOptions options, TemplateBinderFactory templateBinderFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-06-20 18:00:59.069 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:00:59.093 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:00:59.093 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:00:59.093 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:01:01.015 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:01:01.070 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 57.4824ms
+2024-06-20 18:01:01.180 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:01:01.184 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 18:01:01.229 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.8412ms
+2024-06-20 18:01:09.537 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - null null
+2024-06-20 18:01:09.540 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 18:01:09.557 +02:00 [INF] Executing endpoint 'HTTP: GET download/{filename}'
+2024-06-20 18:01:09.823 +02:00 [INF] Sending file with download name 'coding.mp4'.
+2024-06-20 18:01:09.833 +02:00 [INF] Executed endpoint 'HTTP: GET download/{filename}'
+2024-06-20 18:01:09.835 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/download/coding.mp4 - 200 2057267 application/octet-stream 297.6468ms
+2024-06-20 18:01:45.297 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:01:45.300 +02:00 [INF] Executing endpoint 'HTTP: GET stream/{filename}'
+2024-06-20 18:01:45.333 +02:00 [INF] Sending file with download name ''.
+2024-06-20 18:01:45.366 +02:00 [INF] Executed endpoint 'HTTP: GET stream/{filename}'
+2024-06-20 18:01:45.366 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 200 2057267 media/mp4 70.0125ms
+2024-06-20 18:02:02.761 +02:00 [INF] Application is shutting down...
+2024-06-20 18:02:11.761 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:02:11.793 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:02:11.793 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:02:11.793 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:02:12.135 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:02:12.200 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 69.1217ms
+2024-06-20 18:02:12.650 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:02:12.653 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 18:02:12.705 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.5945ms
+2024-06-20 18:02:14.495 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:02:14.497 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 18:02:14.521 +02:00 [INF] Executing endpoint 'HTTP: GET stream/{filename}'
+2024-06-20 18:02:14.763 +02:00 [INF] Sending file with download name ''.
+2024-06-20 18:02:14.784 +02:00 [INF] Executed endpoint 'HTTP: GET stream/{filename}'
+2024-06-20 18:02:14.786 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 200 2057267 media/mp4 291.164ms
+2024-06-20 18:02:32.532 +02:00 [INF] Application is shutting down...
+2024-06-20 18:03:57.951 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:03:57.975 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:03:57.975 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:03:57.975 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:03:58.400 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:03:58.480 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 83.2233ms
+2024-06-20 18:03:58.991 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:03:58.998 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 18:03:59.049 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 58.0378ms
+2024-06-20 18:04:06.624 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:04:06.628 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 18:04:06.650 +02:00 [INF] Executing endpoint 'HTTP: GET stream/{filename}'
+2024-06-20 18:04:06.945 +02:00 [INF] Sending file with download name ''.
+2024-06-20 18:04:07.377 +02:00 [INF] Executed endpoint 'HTTP: GET stream/{filename}'
+2024-06-20 18:04:07.379 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 200 2057267 media/mp4 756.2177ms
+2024-06-20 18:04:29.604 +02:00 [INF] Application is shutting down...
+2024-06-20 18:08:33.294 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 18:08:33.336 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:08:33.337 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:08:33.338 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:08:33.338 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:08:34.422 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:08:34.477 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 56.6927ms
+2024-06-20 18:08:35.037 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:08:35.047 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.6342ms
+2024-06-20 18:08:36.149 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:08:36.152 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 18:08:36.168 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 404 0 null 19.9827ms
+2024-06-20 18:08:36.171 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5291/stream/coding.mp4, Response status code: 404
+2024-06-20 18:08:38.808 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:08:38.810 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 404 0 null 1.4431ms
+2024-06-20 18:08:38.810 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5291/stream/coding.mp4, Response status code: 404
+2024-06-20 18:08:39.982 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:08:39.985 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 404 0 null 3.329ms
+2024-06-20 18:08:39.986 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5291/stream/coding.mp4, Response status code: 404
+2024-06-20 18:08:40.352 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:08:40.355 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 404 0 null 3.7522ms
+2024-06-20 18:08:40.358 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5291/stream/coding.mp4, Response status code: 404
+2024-06-20 18:08:40.487 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:08:40.487 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 404 0 null 0.6065ms
+2024-06-20 18:08:40.487 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5291/stream/coding.mp4, Response status code: 404
+2024-06-20 18:09:01.161 +02:00 [INF] Application is shutting down...
+2024-06-20 18:09:09.089 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:09:09.113 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:09:09.113 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:09:09.113 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:09:09.299 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:09:09.360 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 61.4117ms
+2024-06-20 18:09:09.416 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:09:09.461 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.3607ms
+2024-06-20 18:09:11.663 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:09:11.666 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 18:09:11.683 +02:00 [INF] Executing endpoint 'Microservices._cas.Controllers._casController.GetStream (Microservices.CAS)'
+2024-06-20 18:09:11.701 +02:00 [INF] Route matched with {action = "GetStream", controller = "_cas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStream(System.String) on controller Microservices._cas.Controllers._casController (Microservices.CAS).
+2024-06-20 18:09:11.833 +02:00 [INF] Executing action method Microservices._cas.Controllers._casController.GetStream (Microservices.CAS) - Validation state: "Valid"
+2024-06-20 18:09:11.977 +02:00 [INF] Executed action method Microservices._cas.Controllers._casController.GetStream (Microservices.CAS), returned result Microsoft.AspNetCore.Mvc.FileStreamResult in 141.324ms.
+2024-06-20 18:09:11.981 +02:00 [INF] Executing FileStreamResult, sending file with download name '' ...
+2024-06-20 18:09:11.995 +02:00 [INF] Executed action Microservices._cas.Controllers._casController.GetStream (Microservices.CAS) in 291.6225ms
+2024-06-20 18:09:11.995 +02:00 [INF] Executed endpoint 'Microservices._cas.Controllers._casController.GetStream (Microservices.CAS)'
+2024-06-20 18:09:11.998 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 200 2057267 media/mp4 334.7675ms
+2024-06-20 18:09:23.309 +02:00 [INF] Application is shutting down...
+2024-06-20 18:20:46.648 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:20:46.671 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:20:46.671 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:20:46.671 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:20:48.764 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:20:48.837 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 75.8914ms
+2024-06-20 18:20:48.971 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:20:49.011 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 18:20:49.090 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 119.3455ms
+2024-06-20 18:20:55.511 +02:00 [INF] Application is shutting down...
+2024-06-20 18:21:15.438 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:21:15.460 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:21:15.460 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:21:15.460 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:21:16.751 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:21:16.823 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 75.221ms
+2024-06-20 18:21:16.945 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:21:16.948 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 18:21:16.995 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 50.1874ms
+2024-06-20 18:21:30.936 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:21:30.939 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 18:21:30.963 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:21:31.216 +02:00 [INF] Sending file with download name ''.
+2024-06-20 18:21:31.239 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:21:31.248 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 200 2057267 media/mp4 312.3943ms
+2024-06-20 18:21:39.816 +02:00 [INF] Application is shutting down...
+2024-06-20 18:21:53.300 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:21:53.327 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:21:53.327 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:21:53.327 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:21:53.694 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:21:53.810 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 117.8309ms
+2024-06-20 18:21:53.880 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:21:53.884 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 18:21:54.030 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 150.3837ms
+2024-06-20 18:21:56.328 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:21:56.332 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 18:21:56.377 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:22:23.779 +02:00 [INF] Sending file with download name ''.
+2024-06-20 18:22:23.808 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:22:23.819 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 200 2057267 media/mp4 27492.1033ms
+2024-06-20 18:23:02.582 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-20 18:23:02.605 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:23:02.605 +02:00 [INF] Hosting environment: Development
+2024-06-20 18:23:02.605 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-20 18:23:02.849 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-20 18:23:02.913 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 64.786ms
+2024-06-20 18:23:02.994 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-20 18:23:02.998 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-20 18:23:03.047 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 53.2067ms
+2024-06-20 18:23:09.795 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:23:09.799 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-20 18:23:09.819 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:23:10.065 +02:00 [INF] Sending file with download name ''.
+2024-06-20 18:23:10.075 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:23:10.077 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 200 2057267 video/mp4 282.52ms
+2024-06-20 18:23:10.102 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - null null
+2024-06-20 18:23:10.103 +02:00 [INF] Executing endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:23:10.105 +02:00 [INF] Sending file with download name ''.
+2024-06-20 18:23:10.109 +02:00 [INF] Executed endpoint 'HTTP: GET {contentType}/{filename}'
+2024-06-20 18:23:10.109 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/stream/coding.mp4 - 206 2057267 video/mp4 6.7372ms
+2024-06-20 18:23:15.223 +02:00 [INF] Application is shutting down...
