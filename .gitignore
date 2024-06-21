@@ -3,3 +3,9 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+/.vs/ProjectEvaluation
+/.vs/Microservices/v17
+/.vs/Microservices/FileContentIndex
+/.vs/Microservices/DesignTimeBuild
+/.vs
+/Microservices.sln.DotSettings.user
