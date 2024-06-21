@@ -1,7 +1,8 @@
+using Microservices.CAS.Db.Repository.Interfaces;
 using Microservices.CAS.Models;
 using MongoDB.Driver;
 
-namespace Microservices.CAS.Db;
+namespace Microservices.CAS.Db.Repository;
 
 public class CASFileRepository(MongoDBContext context) : IRepository<CASFile>
 {

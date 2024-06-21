@@ -23,9 +23,9 @@ namespace Microservices.CAS.Business
         /// </summary>
         /// <param name="filePath">The path of the file to read.</param>
         /// <returns>A byte array containing the contents of the file.</returns>
-        public static byte[] ReadFromFile(string filePath)
+        public static async ValueTask<byte[]> ReadFromFile(string filePath)
         {
-            return File.ReadAllBytes(filePath);
+            return await File.ReadAllBytesAsync(filePath);
         }
 
         /// <summary>
@@ -34,9 +34,9 @@ namespace Microservices.CAS.Business
         /// </summary>
         /// <param name="filePath">The path of the file to write to.</param>
         /// <param name="content">The byte array to write to the file.</param>
-        public static void WriteToFile(string filePath, byte[] content)
+        public static async ValueTask WriteToFile(string filePath, byte[] content)
         {
-            File.WriteAllBytes(filePath, content);
+           await File.WriteAllBytesAsync(filePath, content);
         }
 
         /// <summary>
@@ -54,11 +54,11 @@ namespace Microservices.CAS.Business
         /// If the file does not exist, no exception is thrown.
         /// </summary>
         /// <param name="filePath">The path of the file to delete.</param>
-        public static void DeleteFile(string filePath)
+        public static async ValueTask DeleteFile(string filePath)
         {
             if (FileExists(filePath))
             {
-                File.Delete(filePath);
+							await Task.Run(() => File.Delete(filePath));
             }
         }
     }

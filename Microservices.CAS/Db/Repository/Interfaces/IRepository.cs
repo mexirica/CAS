@@ -1,4 +1,4 @@
-namespace Microservices.CAS.Db;
+namespace Microservices.CAS.Db.Repository.Interfaces;
 
 public interface IRepository<T>
 {

@@ -1,5 +1,6 @@
 using Microservices.CAS.Business;
 using Microservices.CAS.Configs;
+using Microservices.CAS.Db.Repository.Interfaces;
 using Microservices.CAS.Middleware;
 using Microservices.CAS.Routes;
 using Prometheus;
@@ -23,6 +24,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
-app.MapFileRoutes(app.Services.GetRequiredService<ContentAddressableStorage>());
+app.MapFileRoutes(app.Services.GetRequiredService<ContentAddressableStorage>(),app.Services.GetRequiredService<ICacheRepository>());
 
 app.Run();

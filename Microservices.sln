@@ -1,8 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.CAS", "Microservices.CAS\Microservices.CAS.csproj", "{86BC8277-2900-4925-B656-F6AB4DDAE112}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.CAS", "Microservices.CAS\Microservices.CAS.csproj", "{86BC8277-2900-4925-B656-F6AB4DDAE112}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Gateway", "Microservices.Gateway\Microservices.Gateway.csproj", "{245C552E-F96F-4848-8089-2E211081B2AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.Gateway", "Microservices.Gateway\Microservices.Gateway.csproj", "{245C552E-F96F-4848-8089-2E211081B2AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.CAS.Security", "Microservices.CAS.Security\Microservices.CAS.Security.csproj", "{F7B26CFD-1222-478A-A7D7-81EB216E0FCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +23,15 @@ Global
 		{245C552E-F96F-4848-8089-2E211081B2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{245C552E-F96F-4848-8089-2E211081B2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{245C552E-F96F-4848-8089-2E211081B2AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B26CFD-1222-478A-A7D7-81EB216E0FCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B26CFD-1222-478A-A7D7-81EB216E0FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B26CFD-1222-478A-A7D7-81EB216E0FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B26CFD-1222-478A-A7D7-81EB216E0FCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7622BD2B-1FE4-4D54-BC0D-2351E78A0D0B}
 	EndGlobalSection
 EndGlobal
