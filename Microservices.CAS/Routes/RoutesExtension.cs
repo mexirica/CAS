@@ -1,13 +1,5 @@
 using Microservices.CAS.Business;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Routing;
-using System;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Microservices.CAS.Db.Repository.Interfaces;
-using StackExchange.Redis;
 
 namespace Microservices.CAS.Routes
 {
@@ -22,12 +14,12 @@ namespace Microservices.CAS.Routes
 		/// <param name="endpoints">The IEndpointRouteBuilder instance.</param>
 		/// <param name="cas">The ContentAddressableStorage instance.</param>
 		/// <returns>The IEndpointRouteBuilder instance with mapped routes.</returns>
-		public static IEndpointRouteBuilder MapFileRoutes(this IEndpointRouteBuilder endpoints, ContentAddressableStorage cas, ICacheRepository cache)
+		public static IEndpointRouteBuilder MapRoutes(this IEndpointRouteBuilder endpoints, ContentAddressableStorage cas, ICacheRepository cache)
 		{
-			var fileRoutes = endpoints.MapGroup("/v1");
+			var routes = endpoints.MapGroup("/v1");
 
 			// Map POST route for file upload
-			fileRoutes.MapPost("/upload/{filename}", async (string filename, HttpContext context) =>
+			routes.MapPost("/upload/{filename}", async (string filename, HttpContext context) =>
 			{
 				try
 				{
@@ -47,7 +39,7 @@ namespace Microservices.CAS.Routes
 			});
 
 			// Map GET route for file retrieval
-			fileRoutes.MapGet("/{contentType}/{filename}", async (string filename, string contentType) =>
+			routes.MapGet("/{contentType}/{filename}", async (string filename, string contentType) =>
 			{
 				try
 				{

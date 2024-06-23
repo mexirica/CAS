@@ -1,0 +1,58 @@
+2024-06-22 14:06:25.140 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-22 14:06:25.162 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-22 14:06:25.162 +02:00 [INF] Hosting environment: Development
+2024-06-22 14:06:25.162 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-22 14:06:32.979 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-22 14:06:33.072 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 101.9503ms
+2024-06-22 14:06:33.084 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/swagger-ui-bundle.js - null null
+2024-06-22 14:06:33.084 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/swagger-ui-standalone-preset.js - null null
+2024-06-22 14:06:33.084 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/swagger-ui.css - null null
+2024-06-22 14:06:33.090 +02:00 [INF] The file /swagger-ui-bundle.js was not modified
+2024-06-22 14:06:33.090 +02:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2024-06-22 14:06:33.090 +02:00 [INF] The file /swagger-ui.css was not modified
+2024-06-22 14:06:33.090 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/swagger-ui-bundle.js - 304 null text/javascript 6.16ms
+2024-06-22 14:06:33.090 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 6.1189ms
+2024-06-22 14:06:33.090 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/swagger-ui.css - 304 null text/css 6.0382ms
+2024-06-22 14:06:33.228 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-22 14:06:33.233 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-22 14:06:33.282 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 54.201ms
+2024-06-22 14:06:36.242 +02:00 [INF] Application is shutting down...
+2024-06-22 14:06:46.641 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-22 14:06:46.673 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-22 14:06:46.673 +02:00 [INF] Hosting environment: Development
+2024-06-22 14:06:46.673 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-22 14:07:21.920 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/v1/download/coding.mp4 - null null
+2024-06-22 14:07:21.941 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-22 14:07:21.977 +02:00 [INF] Executing endpoint 'HTTP: GET /v1/{contentType}/{filename}'
+2024-06-22 14:08:20.224 +02:00 [INF] Sending file with download name 'coding.mp4'.
+2024-06-22 14:08:20.310 +02:00 [INF] Executed endpoint 'HTTP: GET /v1/{contentType}/{filename}'
+2024-06-22 14:08:20.313 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/v1/download/coding.mp4 - 200 2057267 application/octet-stream 58397.768ms
+2024-06-22 14:08:38.096 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/v1/download/coding.mp4 - null null
+2024-06-22 14:08:38.098 +02:00 [INF] Executing endpoint 'HTTP: GET /v1/{contentType}/{filename}'
+2024-06-22 14:08:58.458 +02:00 [INF] Sending file with download name 'coding.mp4'.
+2024-06-22 14:08:58.626 +02:00 [INF] Executed endpoint 'HTTP: GET /v1/{contentType}/{filename}'
+2024-06-22 14:08:58.648 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/v1/download/coding.mp4 - 200 2057267 application/octet-stream 20554.5978ms
+2024-06-22 15:12:55.761 +02:00 [INF] Now listening on: http://localhost:5291
+2024-06-22 15:12:55.786 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-22 15:12:55.786 +02:00 [INF] Hosting environment: Development
+2024-06-22 15:12:55.786 +02:00 [INF] Content root path: /Users/rodrigomecheri/RiderProjects/Microservices/Microservices.CAS
+2024-06-22 15:12:57.507 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/index.html - null null
+2024-06-22 15:12:57.934 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/index.html - 200 null text/html;charset=utf-8 429.8415ms
+2024-06-22 15:12:58.357 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - null null
+2024-06-22 15:12:58.361 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-06-22 15:12:58.407 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 50.1979ms
+2024-06-22 15:12:58.411 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/swagger/favicon-32x32.png - null null
+2024-06-22 15:12:58.414 +02:00 [INF] The file /favicon-32x32.png was not modified
+2024-06-22 15:12:58.415 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/swagger/favicon-32x32.png - 304 null image/png 3.3839ms
+2024-06-22 15:13:07.780 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/healthz - null null
+2024-06-22 15:13:07.783 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-22 15:13:07.802 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/healthz - 404 0 null 23.2482ms
+2024-06-22 15:13:07.805 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5291/healthz, Response status code: 404
+2024-06-22 15:13:10.785 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/health - null null
+2024-06-22 15:13:10.789 +02:00 [INF] Executing endpoint 'Health checks'
+2024-06-22 15:13:10.797 +02:00 [INF] Executed endpoint 'Health checks'
+2024-06-22 15:13:10.797 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/health - 200 null text/plain 12.301ms
+2024-06-22 15:13:10.864 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5291/favicon.ico - null null
+2024-06-22 15:13:10.865 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5291/favicon.ico - 404 0 null 0.8334ms
+2024-06-22 15:13:10.865 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5291/favicon.ico, Response status code: 404
+2024-06-22 15:13:16.673 +02:00 [INF] Application is shutting down...

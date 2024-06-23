@@ -1,6 +1,4 @@
-﻿using Microservices.CAS.Models;
-
-namespace Microservices.CAS.Db.Repository.Interfaces
+﻿namespace Microservices.CAS.Db.Repository.Interfaces
 {
 	public interface ICacheRepository 
 	{

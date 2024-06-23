@@ -1,7 +1,4 @@
-﻿using System.Text.Json;
-using System.Text.Json;
-using Microservices.CAS.Db.Repository.Interfaces;
-using Microservices.CAS.Models;
+﻿using Microservices.CAS.Db.Repository.Interfaces;
 using StackExchange.Redis;
 
 namespace Microservices.CAS.Db.Repository

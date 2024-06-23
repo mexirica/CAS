@@ -24,6 +24,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
-app.MapFileRoutes(app.Services.GetRequiredService<ContentAddressableStorage>(),app.Services.GetRequiredService<ICacheRepository>());
+app.MapRoutes(app.Services.GetRequiredService<ContentAddressableStorage>(),app.Services.GetRequiredService<ICacheRepository>());
+app.MapHealthChecks("/health");
 
 app.Run();
